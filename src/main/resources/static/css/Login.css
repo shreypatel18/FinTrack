@@ -1,0 +1,162 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    background-image: url("img3.jpg");
+    background-size: cover;
+
+}
+
+
+#main-body {
+
+    height: 70%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-txt {
+    margin-top: 20px;
+}
+
+#signup-txt a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+#signup-txt a:hover {
+
+    opacity: 0.8;
+}
+
+#bottom-panel {
+    width: 100%;
+    height: 20%;
+    align-self: flex-end;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#top-panel {
+    width: 100%;
+    background-color: transparent;
+    height: 10%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 50;
+    font-size: 2em;
+}
+
+
+
+
+#Login-Form {
+    height: 100%;
+    width: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+i {
+    color: white;
+    transform: scale(3);
+
+}
+
+.bottom-panel-content p {
+    position: relative;
+    top: 30px;
+    right: 20px;
+    color: whitesmoke;
+    font-size: 0.7em;
+}
+
+.bottom-panel-content p:hover {
+    transform: scale(1.5);
+}
+
+
+.contain-out {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.login-container {
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+#email:target {
+    border: 1px grey;
+}

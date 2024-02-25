@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/Registration.css}"/>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body  style="background-image:'url(@{/css/img3.jpg})'">
+
+
+<form th:action="@{/register/postRegister}" th:object="${form}" method="post">
+    <h2>Registration Form</h2>
+    <div th:if="${error==true}" class="error">Invalid data fill the form again</div>
+    <div th:if="${param.error==true}" class="error">Invalid data fill the form again</div>
+    <!-- Section 1: Personal Information -->
+    <div class="section">
+        <label for="email">email :</label>
+        <input type="email" id="email" name="email" th:field="*{email}" required>
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" th:field="*{password}" required>
+
+
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="income" th:field="*{Balance}" required>
+
+    </div>
+
+    <!-- Section 2: Expenses Information -->
+    <div class="section">
+        <label for="foodBill">Food Bill Cost:</label>
+        <input type="number" id="foodBill" name="foodBill" th:field="*{foodBalance}" required>
+
+        <label for="transportationCost">Transportation Cost:</label>
+        <input type="number" id="transportationCost" name="transportationCost" th:field="*{tranBalance}" required>
+
+        <label for="miscellaneous">Miscellaneous Money Spend:</label>
+        <input type="number" id="miscellaneous" name="miscellaneous" th:field="*{miscllBalance}" required>
+
+    </div>
+
+    <!--     Section 3: Utility Bills-->
+    <div class="section">
+        <label for="lightBill">Light Bill Amount:</label>
+        <input type="number" id="lightBill" name="lightBill" required>
+
+        <label for="phoneBill">Phone Bill Amount:</label>
+        <input type="number" id="phoneBill" name="phoneBill" required>
+
+        <label for="rent">Rent Amount:</label>
+        <input type="number" id="rent" name="rent" required>
+
+        <label for="monthlyBills">monthly Bills Amount:</label>
+        <input type="number" id="monthlyBills" name="monthlyBills" required>
+
+    </div>
+
+    <button type="submit">Submit</button>
+    <p>Already registered user ? Back To <a th:href="@{/Login}">Login</a></p>
+</form>
+
+
+</body>
+
+</html>

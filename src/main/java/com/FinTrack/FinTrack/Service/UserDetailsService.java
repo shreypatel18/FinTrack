@@ -134,11 +134,11 @@ public class UserDetailsService {
                 x = userDetails.miscllBalanceCurr - transaction.getAmount();
                 if (x < 0) {
                     throw new InsufficientBalance("Miscllaneous balance is less than entered amount");
-                } else userDetails.setMiscllBalance(x);
+                } else userDetails.setMiscllBalanceCurr(x);
                 break;
         }
 
-        userDetails.BalanceCurr = userDetails.Balance - transaction.getAmount();
+        userDetails.setBalanceCurr(userDetails.BalanceCurr-transaction.getAmount());
         userDetails.transactions.add(transaction);
         transaction.setUserDetails(userDetails);
         userDetailsRepo.save(userDetails);
